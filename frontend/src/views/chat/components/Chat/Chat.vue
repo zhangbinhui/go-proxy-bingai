@@ -311,6 +311,7 @@ const auth = async () => {
     <div v-if="isShowUnauthorizedModal" class="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-black/40 z-50">
       <NResult class="box-border w-11/12 lg:w-[400px] px-4 py-4 bg-white rounded-md" status="403" title="">
         <template #icon>
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="120px" height="120px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve">  
                   <image id="image0" width="120" height="120" x="0" y="0"
           href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
@@ -526,8 +527,9 @@ const auth = async () => {
       YXRlADIwMjMtMDUtMDVUMTU6NDk6MjErMDA6MDBZiZ36AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIz
       LTA1LTA1VDE1OjQ5OjIxKzAwOjAwKNQlRgAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyMy0wNS0w
       NVQxNTo0OToyMyswMDowMOheFbAAAAAASUVORK5CYII=" />
-      </svg>
-          <span>扫码关注公众号:农村自强少年，回复gpt获取授权码</span>
+            </svg>
+            <span>扫码关注公众号:农村自强少年，回复gpt获取授权码</span>
+          </div>
         </template>
         <template #footer>
           <NInput class="w-11/12" v-model:value="authKey" type="password" placeholder="请输入授权码" maxlength="60" clearable></NInput>
